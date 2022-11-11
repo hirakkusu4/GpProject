@@ -1,7 +1,7 @@
 ﻿
 namespace Gp_Form_Project
 {
-    partial class Form1
+    partial class mine_page
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -30,8 +30,8 @@ namespace Gp_Form_Project
         private void InitializeComponent()
         {
             this.sqLiteCommandBuilder1 = new System.Data.SQLite.SQLiteCommandBuilder();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.register_button = new System.Windows.Forms.Button();
+            this.login_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sqLiteCommandBuilder1
@@ -39,34 +39,35 @@ namespace Gp_Form_Project
             this.sqLiteCommandBuilder1.DataAdapter = null;
             this.sqLiteCommandBuilder1.QuoteSuffix = "]";
             // 
-            // button1
+            // register_button
             // 
-            this.button1.Location = new System.Drawing.Point(299, 91);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(229, 75);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.register_button.Location = new System.Drawing.Point(331, 70);
+            this.register_button.Name = "register_button";
+            this.register_button.Size = new System.Drawing.Size(229, 75);
+            this.register_button.TabIndex = 0;
+            this.register_button.Text = "新規登録";
+            this.register_button.UseVisualStyleBackColor = true;
+            this.register_button.Click += new System.EventHandler(this.register_button_Click);
             // 
-            // button2
+            // login_button
             // 
-            this.button2.Location = new System.Drawing.Point(299, 203);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(229, 75);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.login_button.Location = new System.Drawing.Point(331, 198);
+            this.login_button.Name = "login_button";
+            this.login_button.Size = new System.Drawing.Size(229, 75);
+            this.login_button.TabIndex = 1;
+            this.login_button.Text = "ログイン";
+            this.login_button.UseVisualStyleBackColor = true;
+            this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
-            // Form1
+            // mine_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 509);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.login_button);
+            this.Controls.Add(this.register_button);
+            this.Name = "mine_page";
+            this.Text = "mine_page";
             this.ResumeLayout(false);
 
         }
@@ -74,8 +75,8 @@ namespace Gp_Form_Project
         #endregion
 
         private System.Data.SQLite.SQLiteCommandBuilder sqLiteCommandBuilder1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button register_button;
+        private System.Windows.Forms.Button login_button;
     }
 }
 

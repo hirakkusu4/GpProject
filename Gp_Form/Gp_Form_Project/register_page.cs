@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Gp_Form_Project
 {
-    public partial class Form1 : Form
+    public partial class register_page : Form
     {
-        public Form1()
+        public register_page()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void a_TextChanged(object sender, EventArgs e)
         {
 
         }
