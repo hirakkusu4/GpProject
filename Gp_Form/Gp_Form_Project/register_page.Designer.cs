@@ -50,8 +50,10 @@ namespace Gp_Form_Project
             this.name_kana_textBox = new System.Windows.Forms.TextBox();
             this.name_kana_label = new System.Windows.Forms.Label();
             this.gender_groupBox = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.woman_radioButton = new System.Windows.Forms.RadioButton();
+            this.man_radioButton = new System.Windows.Forms.RadioButton();
+            this.password_label = new System.Windows.Forms.Label();
+            this.password_textBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.gender_groupBox.SuspendLayout();
@@ -105,7 +107,7 @@ namespace Gp_Form_Project
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 24);
             this.bindingNavigatorCountItem.Text = "/ {0}";
             this.bindingNavigatorCountItem.ToolTipText = "項目の総数";
             // 
@@ -115,7 +117,7 @@ namespace Gp_Form_Project
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "削除";
             // 
             // bindingNavigatorMoveFirstItem
@@ -124,7 +126,7 @@ namespace Gp_Form_Project
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "最初に移動";
             // 
             // bindingNavigatorMovePreviousItem
@@ -133,19 +135,18 @@ namespace Gp_Form_Project
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "前に戻る";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "位置";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -154,7 +155,7 @@ namespace Gp_Form_Project
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -162,7 +163,7 @@ namespace Gp_Form_Project
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "次に移動";
             // 
             // bindingNavigatorMoveLastItem
@@ -171,13 +172,13 @@ namespace Gp_Form_Project
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "最後に移動";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // name_kanzi_textBox
             // 
@@ -221,8 +222,8 @@ namespace Gp_Form_Project
             // gender_groupBox
             // 
             this.gender_groupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.gender_groupBox.Controls.Add(this.radioButton2);
-            this.gender_groupBox.Controls.Add(this.radioButton1);
+            this.gender_groupBox.Controls.Add(this.woman_radioButton);
+            this.gender_groupBox.Controls.Add(this.man_radioButton);
             this.gender_groupBox.Location = new System.Drawing.Point(264, 180);
             this.gender_groupBox.Name = "gender_groupBox";
             this.gender_groupBox.Size = new System.Drawing.Size(288, 50);
@@ -230,33 +231,51 @@ namespace Gp_Form_Project
             this.gender_groupBox.TabStop = false;
             this.gender_groupBox.Text = "性別";
             // 
-            // radioButton1
+            // woman_radioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(56, 21);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(110, 19);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.woman_radioButton.AutoSize = true;
+            this.woman_radioButton.Location = new System.Drawing.Point(172, 21);
+            this.woman_radioButton.Name = "woman_radioButton";
+            this.woman_radioButton.Size = new System.Drawing.Size(58, 19);
+            this.woman_radioButton.TabIndex = 1;
+            this.woman_radioButton.TabStop = true;
+            this.woman_radioButton.Text = "女性";
+            this.woman_radioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // man_radioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(172, 21);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(110, 19);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.man_radioButton.AutoSize = true;
+            this.man_radioButton.Location = new System.Drawing.Point(56, 21);
+            this.man_radioButton.Name = "man_radioButton";
+            this.man_radioButton.Size = new System.Drawing.Size(58, 19);
+            this.man_radioButton.TabIndex = 0;
+            this.man_radioButton.TabStop = true;
+            this.man_radioButton.Text = "男性";
+            this.man_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // password_label
+            // 
+            this.password_label.AutoSize = true;
+            this.password_label.Location = new System.Drawing.Point(268, 321);
+            this.password_label.Name = "password_label";
+            this.password_label.Size = new System.Drawing.Size(64, 15);
+            this.password_label.TabIndex = 9;
+            this.password_label.Text = "パスワード";
+            // 
+            // password_textBox
+            // 
+            this.password_textBox.Location = new System.Drawing.Point(369, 318);
+            this.password_textBox.Name = "password_textBox";
+            this.password_textBox.Size = new System.Drawing.Size(183, 22);
+            this.password_textBox.TabIndex = 10;
             // 
             // register_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.password_textBox);
+            this.Controls.Add(this.password_label);
             this.Controls.Add(this.gender_groupBox);
             this.Controls.Add(this.name_kana_label);
             this.Controls.Add(this.name_kana_textBox);
@@ -266,7 +285,7 @@ namespace Gp_Form_Project
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.textBox1);
             this.Name = "register_page";
-            this.Text = "ログインページ";
+            this.Text = "新規登録ページ";
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
@@ -298,7 +317,9 @@ namespace Gp_Form_Project
         private System.Windows.Forms.TextBox name_kana_textBox;
         private System.Windows.Forms.Label name_kana_label;
         private System.Windows.Forms.GroupBox gender_groupBox;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton woman_radioButton;
+        private System.Windows.Forms.RadioButton man_radioButton;
+        private System.Windows.Forms.Label password_label;
+        private System.Windows.Forms.TextBox password_textBox;
     }
 }

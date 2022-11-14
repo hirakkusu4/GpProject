@@ -41,7 +41,7 @@ namespace Gp_Form_Project
             // 
             // register_button
             // 
-            this.register_button.Location = new System.Drawing.Point(331, 70);
+            this.register_button.Location = new System.Drawing.Point(331, 104);
             this.register_button.Name = "register_button";
             this.register_button.Size = new System.Drawing.Size(229, 75);
             this.register_button.TabIndex = 0;
@@ -51,7 +51,7 @@ namespace Gp_Form_Project
             // 
             // login_button
             // 
-            this.login_button.Location = new System.Drawing.Point(331, 198);
+            this.login_button.Location = new System.Drawing.Point(331, 265);
             this.login_button.Name = "login_button";
             this.login_button.Size = new System.Drawing.Size(229, 75);
             this.login_button.TabIndex = 1;
@@ -67,7 +67,7 @@ namespace Gp_Form_Project
             this.Controls.Add(this.login_button);
             this.Controls.Add(this.register_button);
             this.Name = "mine_page";
-            this.Text = "mine_page";
+            this.Text = "メインメニュー";
             this.ResumeLayout(false);
 
         }
