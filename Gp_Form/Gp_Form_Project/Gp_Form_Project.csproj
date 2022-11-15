@@ -102,6 +102,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="change_page.resx">
+      <DependentUpon>change_page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search_page.resx">
+      <DependentUpon>search_page.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="secession_page.resx">
       <DependentUpon>secession_page.cs</DependentUpon>
     </EmbeddedResource>

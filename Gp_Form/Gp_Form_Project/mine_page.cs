@@ -20,6 +20,7 @@ namespace Gp_Form_Project
         {
             register_page register = new register_page();
             register.Show();
+            this.Visible = false;
         }
         private void login_button_Click(object sender, EventArgs e)
         {

@@ -37,7 +37,7 @@ namespace Gp_Form_Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "secession_page";
-            this.Text = "退会";
+            this.Text = "退会ページ";
             this.ResumeLayout(false);
 
         }

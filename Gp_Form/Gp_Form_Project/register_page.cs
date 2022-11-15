@@ -16,10 +16,9 @@ namespace Gp_Form_Project
         {
             InitializeComponent();
         }
-
-        private void a_TextChanged(object sender, EventArgs e)
+        private void decision_button_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("入力内容に誤りはないですか？", "入力内容確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
     }
 }

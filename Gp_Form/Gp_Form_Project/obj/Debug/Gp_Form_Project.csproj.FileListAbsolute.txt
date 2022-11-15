@@ -15,3 +15,5 @@ C:\Users\s20217040\Desktop\GP20217040\Gp_Form\Gp_Form_Project\obj\Debug\Gp_Form_
 C:\Users\s20217040\Desktop\GP20217040\Gp_Form\Gp_Form_Project\obj\Debug\Gp_Form_Project.login_page.resources
 C:\Users\s20217040\Desktop\GP20217040\Gp_Form\Gp_Form_Project\obj\Debug\Gp_Form_Project.Form1.resources
 C:\Users\s20217040\Desktop\GP20217040\Gp_Form\Gp_Form_Project\obj\Debug\Gp_Form_Project.register_page.resources
+C:\Users\s20217040\Desktop\GP20217040\Gp_Form\Gp_Form_Project\obj\Debug\Gp_Form_Project.change_page.resources
+C:\Users\s20217040\Desktop\GP20217040\Gp_Form\Gp_Form_Project\obj\Debug\Gp_Form_Project.search_page.resources

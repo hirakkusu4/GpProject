@@ -33,6 +33,7 @@ namespace Gp_Form_Project
             this.login_password_label = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.login_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // login_memberID_label
@@ -66,13 +67,22 @@ namespace Gp_Form_Project
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(211, 22);
             this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "66";
+            // 
+            // login_button
+            // 
+            this.login_button.Location = new System.Drawing.Point(343, 224);
+            this.login_button.Name = "login_button";
+            this.login_button.Size = new System.Drawing.Size(75, 23);
+            this.login_button.TabIndex = 5;
+            this.login_button.Text = "ログイン";
+            this.login_button.UseVisualStyleBackColor = true;
             // 
             // login_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.login_button);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.login_password_label);
@@ -90,5 +100,6 @@ namespace Gp_Form_Project
         private System.Windows.Forms.Label login_password_label;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button login_button;
     }
 }

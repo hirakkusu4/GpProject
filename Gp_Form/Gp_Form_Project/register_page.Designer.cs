@@ -54,6 +54,7 @@ namespace Gp_Form_Project
             this.man_radioButton = new System.Windows.Forms.RadioButton();
             this.password_label = new System.Windows.Forms.Label();
             this.password_textBox = new System.Windows.Forms.TextBox();
+            this.decision_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.gender_groupBox.SuspendLayout();
@@ -147,6 +148,7 @@ namespace Gp_Form_Project
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "位置";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Yu Gothic UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -159,12 +161,8 @@ namespace Gp_Form_Project
             // 
             // bindingNavigatorMoveNextItem
             // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveNextItem.Text = "次に移動";
             // 
             // bindingNavigatorMoveLastItem
             // 
@@ -222,6 +220,7 @@ namespace Gp_Form_Project
             // gender_groupBox
             // 
             this.gender_groupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.gender_groupBox.BackColor = System.Drawing.SystemColors.Control;
             this.gender_groupBox.Controls.Add(this.woman_radioButton);
             this.gender_groupBox.Controls.Add(this.man_radioButton);
             this.gender_groupBox.Location = new System.Drawing.Point(264, 180);
@@ -269,11 +268,23 @@ namespace Gp_Form_Project
             this.password_textBox.Size = new System.Drawing.Size(183, 22);
             this.password_textBox.TabIndex = 10;
             // 
+            // decision_button
+            // 
+            this.decision_button.Location = new System.Drawing.Point(369, 386);
+            this.decision_button.Name = "decision_button";
+            this.decision_button.Size = new System.Drawing.Size(75, 23);
+            this.decision_button.TabIndex = 12;
+            this.decision_button.Text = "確定";
+            this.decision_button.UseVisualStyleBackColor = true;
+            this.decision_button.Click += new System.EventHandler(this.decision_button_Click);
+            // 
             // register_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.decision_button);
             this.Controls.Add(this.password_textBox);
             this.Controls.Add(this.password_label);
             this.Controls.Add(this.gender_groupBox);
@@ -284,8 +295,10 @@ namespace Gp_Form_Project
             this.Controls.Add(this.name_kanzi_textBox);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.textBox1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "register_page";
             this.Text = "新規登録ページ";
+            this.TransparencyKey = System.Drawing.Color.Black;
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
@@ -321,5 +334,6 @@ namespace Gp_Form_Project
         private System.Windows.Forms.RadioButton man_radioButton;
         private System.Windows.Forms.Label password_label;
         private System.Windows.Forms.TextBox password_textBox;
+        private System.Windows.Forms.Button decision_button;
     }
 }
