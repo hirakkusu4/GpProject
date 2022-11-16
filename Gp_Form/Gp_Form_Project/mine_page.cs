@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,24 @@ namespace Gp_Form_Project
         {
             login_page login = new login_page();
             login.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (var con = new SQLiteConnection("Data Source=member.db"))
+            {
+                con.Open();
+                using (SQLiteCommand command = con.CreateCommand())
+                {
+                    command.CommandText =
+                        "create table m_member(CD INTEGER   PRIMARY KEY AUTOINCREMENT," +
+                        " member_id INTEGER, name_k TEXT, postal INTEGER, address TEXT, telephone INTEGER," +
+                        "gender INTEGER, birth_date INTEGER. mail_address TEXT, membertype_code INTEGER," +
+                        "register_date INTEGER, last_use_date INTEGER. next_use_date INTEGER, password TEXT)";
+                    command.ExecuteNonQuery();
+                }
+                con.Close();
+            }
         }
     }   
 }

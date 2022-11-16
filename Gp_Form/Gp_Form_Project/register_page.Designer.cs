@@ -44,10 +44,9 @@ namespace Gp_Form_Project
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.name_kanzi_textBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.name_k_textBox = new System.Windows.Forms.TextBox();
             this.name_kanzi_label = new System.Windows.Forms.Label();
-            this.name_kana_textBox = new System.Windows.Forms.TextBox();
+            this.name_h_textBox = new System.Windows.Forms.TextBox();
             this.name_kana_label = new System.Windows.Forms.Label();
             this.gender_groupBox = new System.Windows.Forms.GroupBox();
             this.woman_radioButton = new System.Windows.Forms.RadioButton();
@@ -55,9 +54,12 @@ namespace Gp_Form_Project
             this.password_label = new System.Windows.Forms.Label();
             this.password_textBox = new System.Windows.Forms.TextBox();
             this.decision_button = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.gender_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -178,40 +180,35 @@ namespace Gp_Form_Project
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // name_kanzi_textBox
+            // name_k_textBox
             // 
-            this.name_kanzi_textBox.Location = new System.Drawing.Point(369, 72);
-            this.name_kanzi_textBox.Name = "name_kanzi_textBox";
-            this.name_kanzi_textBox.Size = new System.Drawing.Size(183, 22);
-            this.name_kanzi_textBox.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 0;
+            this.name_k_textBox.Location = new System.Drawing.Point(131, 68);
+            this.name_k_textBox.Name = "name_k_textBox";
+            this.name_k_textBox.Size = new System.Drawing.Size(183, 22);
+            this.name_k_textBox.TabIndex = 3;
             // 
             // name_kanzi_label
             // 
             this.name_kanzi_label.AutoSize = true;
-            this.name_kanzi_label.Location = new System.Drawing.Point(268, 75);
+            this.name_kanzi_label.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.name_kanzi_label.Location = new System.Drawing.Point(30, 71);
             this.name_kanzi_label.Name = "name_kanzi_label";
             this.name_kanzi_label.Size = new System.Drawing.Size(95, 15);
             this.name_kanzi_label.TabIndex = 4;
             this.name_kanzi_label.Text = "お名前（漢字）";
             // 
-            // name_kana_textBox
+            // name_h_textBox
             // 
-            this.name_kana_textBox.Location = new System.Drawing.Point(369, 124);
-            this.name_kana_textBox.Name = "name_kana_textBox";
-            this.name_kana_textBox.Size = new System.Drawing.Size(183, 22);
-            this.name_kana_textBox.TabIndex = 6;
+            this.name_h_textBox.Location = new System.Drawing.Point(131, 120);
+            this.name_h_textBox.Name = "name_h_textBox";
+            this.name_h_textBox.Size = new System.Drawing.Size(183, 22);
+            this.name_h_textBox.TabIndex = 6;
             // 
             // name_kana_label
             // 
             this.name_kana_label.AutoSize = true;
-            this.name_kana_label.Location = new System.Drawing.Point(268, 127);
+            this.name_kana_label.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.name_kana_label.Location = new System.Drawing.Point(30, 123);
             this.name_kana_label.Name = "name_kana_label";
             this.name_kana_label.Size = new System.Drawing.Size(90, 15);
             this.name_kana_label.TabIndex = 7;
@@ -223,7 +220,8 @@ namespace Gp_Form_Project
             this.gender_groupBox.BackColor = System.Drawing.SystemColors.Control;
             this.gender_groupBox.Controls.Add(this.woman_radioButton);
             this.gender_groupBox.Controls.Add(this.man_radioButton);
-            this.gender_groupBox.Location = new System.Drawing.Point(264, 180);
+            this.gender_groupBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.gender_groupBox.Location = new System.Drawing.Point(26, 176);
             this.gender_groupBox.Name = "gender_groupBox";
             this.gender_groupBox.Size = new System.Drawing.Size(288, 50);
             this.gender_groupBox.TabIndex = 8;
@@ -255,7 +253,8 @@ namespace Gp_Form_Project
             // password_label
             // 
             this.password_label.AutoSize = true;
-            this.password_label.Location = new System.Drawing.Point(268, 321);
+            this.password_label.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.password_label.Location = new System.Drawing.Point(30, 272);
             this.password_label.Name = "password_label";
             this.password_label.Size = new System.Drawing.Size(64, 15);
             this.password_label.TabIndex = 9;
@@ -263,14 +262,14 @@ namespace Gp_Form_Project
             // 
             // password_textBox
             // 
-            this.password_textBox.Location = new System.Drawing.Point(369, 318);
+            this.password_textBox.Location = new System.Drawing.Point(131, 269);
             this.password_textBox.Name = "password_textBox";
             this.password_textBox.Size = new System.Drawing.Size(183, 22);
             this.password_textBox.TabIndex = 10;
             // 
             // decision_button
             // 
-            this.decision_button.Location = new System.Drawing.Point(369, 386);
+            this.decision_button.Location = new System.Drawing.Point(131, 360);
             this.decision_button.Name = "decision_button";
             this.decision_button.Size = new System.Drawing.Size(75, 23);
             this.decision_button.TabIndex = 12;
@@ -278,21 +277,42 @@ namespace Gp_Form_Project
             this.decision_button.UseVisualStyleBackColor = true;
             this.decision_button.Click += new System.EventHandler(this.decision_button_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(400, 30);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(388, 391);
+            this.dataGridView1.TabIndex = 13;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(319, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "表示";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // register_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.decision_button);
             this.Controls.Add(this.password_textBox);
             this.Controls.Add(this.password_label);
             this.Controls.Add(this.gender_groupBox);
             this.Controls.Add(this.name_kana_label);
-            this.Controls.Add(this.name_kana_textBox);
+            this.Controls.Add(this.name_h_textBox);
             this.Controls.Add(this.name_kanzi_label);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.name_kanzi_textBox);
+            this.Controls.Add(this.name_k_textBox);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.textBox1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -304,6 +324,7 @@ namespace Gp_Form_Project
             this.bindingNavigator1.PerformLayout();
             this.gender_groupBox.ResumeLayout(false);
             this.gender_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,10 +345,9 @@ namespace Gp_Form_Project
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.TextBox name_kanzi_textBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox name_k_textBox;
         private System.Windows.Forms.Label name_kanzi_label;
-        private System.Windows.Forms.TextBox name_kana_textBox;
+        private System.Windows.Forms.TextBox name_h_textBox;
         private System.Windows.Forms.Label name_kana_label;
         private System.Windows.Forms.GroupBox gender_groupBox;
         private System.Windows.Forms.RadioButton woman_radioButton;
@@ -335,5 +355,7 @@ namespace Gp_Form_Project
         private System.Windows.Forms.Label password_label;
         private System.Windows.Forms.TextBox password_textBox;
         private System.Windows.Forms.Button decision_button;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }
