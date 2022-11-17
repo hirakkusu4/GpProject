@@ -19,9 +19,8 @@ namespace Gp_Form_Project
         }
         private void decision_button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("入力内容に誤りはないですか？", "入力内容確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (DialogResult == DialogResult.Yes)
+            DialogResult check = MessageBox.Show("入力内容に誤りはないですか？", "入力内容確認", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (check == DialogResult.Yes)
             {
                 using (SQLiteConnection con = new SQLiteConnection("Data Source=member.db"))
                 {
@@ -39,11 +38,22 @@ namespace Gp_Form_Project
                         //　データ追加
                         cmd.Parameters["Name_k"].Value = name_k_textBox.Text;
                         cmd.Parameters["Name_h"].Value = name_h_textBox.Text;
-                        cmd.Parameters["Gender"].Value = 
+                        // cmd.Parameters["Gender"].Value =
+                        cmd.Parameters["Password"].Value = password_textBox.Text;
                         cmd.ExecuteNonQuery();
                         //　コミット
                         trans.Commit();
                     }
+                }
+                DialogResult complete = 
+                    MessageBox.Show("登録が完了しました。会員IDはログイン時にも必要なのでメモを取るなどで保管してください。", "登録完了",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (complete == DialogResult.OK)
+                {
+                    mine_page mine = new mine_page();
+                    mine.Visible = true;
+
+                    this.Close();
                 }
             }
         }
