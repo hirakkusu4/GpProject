@@ -19,18 +19,22 @@ namespace Gp_Form_Project
         }
         private void register_button_Click(object sender, EventArgs e)
         {
+            // 登録ページへ遷移
             register_page register = new register_page();
             register.Show();
+            // メインメニュー非表示
             this.Visible = false;
         }
         private void login_button_Click(object sender, EventArgs e)
         {
+            // ログインページへ遷移
             login_page login = new login_page();
             login.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // テーブル作成
             using (var con = new SQLiteConnection("Data Source=member.db"))
             {
                 con.Open();
@@ -38,7 +42,7 @@ namespace Gp_Form_Project
                 {
                     command.CommandText =
                         "create table m_member(CD INTEGER  PRIMARY KEY AUTOINCREMENT, member_id INTEGER, name_k TEXT, name_h TEXT," +
-                        " postal INTEGER, address TEXT, telephone INTEGER, gender INTEGER, birth_date INTEGER, mail_address TEXT, " +
+                        " postal INTEGER, address TEXT, telephone INTEGER, gender TEXT, birth_date INTEGER, mail_address TEXT, " +
                         "membertype_code INTEGER,register_date INTEGER, last_use_date INTEGER, next_use_date INTEGER, password TEXT)";
                     command.ExecuteNonQuery();
                 }
