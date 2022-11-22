@@ -41,7 +41,7 @@ namespace Gp_Form_Project
                 using (SQLiteCommand command = con.CreateCommand())
                 {
                     command.CommandText =
-                        "create table m_member(CD INTEGER  PRIMARY KEY AUTOINCREMENT, member_id INTEGER, name_k TEXT, name_h TEXT," +
+                        "create table m_member(member_id INTEGER PRIMARY KEY AUTOINCREMENT, name_k TEXT, name_h TEXT," +
                         " postal INTEGER, address TEXT, telephone INTEGER, gender TEXT, birth_date INTEGER, mail_address TEXT, " +
                         "membertype_code INTEGER,register_date INTEGER, last_use_date INTEGER, next_use_date INTEGER, password TEXT)";
                     command.ExecuteNonQuery();
