@@ -43,46 +43,49 @@ namespace Gp_Form_Project
             this.telephone_label = new System.Windows.Forms.Label();
             this.mail_label = new System.Windows.Forms.Label();
             this.change_button = new System.Windows.Forms.Button();
+            this.show_textBox = new System.Windows.Forms.TextBox();
+            this.member_id_label = new System.Windows.Forms.Label();
+            this.show_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(367, 61);
+            this.textBox1.Location = new System.Drawing.Point(489, 89);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(200, 22);
             this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(367, 105);
+            this.textBox2.Location = new System.Drawing.Point(489, 133);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(200, 22);
             this.textBox2.TabIndex = 1;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(367, 152);
+            this.textBox3.Location = new System.Drawing.Point(489, 180);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(200, 22);
             this.textBox3.TabIndex = 2;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(367, 200);
+            this.textBox4.Location = new System.Drawing.Point(489, 228);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(200, 22);
             this.textBox4.TabIndex = 3;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(367, 246);
+            this.textBox5.Location = new System.Drawing.Point(489, 274);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(200, 22);
             this.textBox5.TabIndex = 4;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(367, 292);
+            this.textBox6.Location = new System.Drawing.Point(489, 320);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(200, 22);
             this.textBox6.TabIndex = 5;
@@ -90,7 +93,7 @@ namespace Gp_Form_Project
             // change_kanzi_label
             // 
             this.change_kanzi_label.AutoSize = true;
-            this.change_kanzi_label.Location = new System.Drawing.Point(278, 64);
+            this.change_kanzi_label.Location = new System.Drawing.Point(130, 92);
             this.change_kanzi_label.Name = "change_kanzi_label";
             this.change_kanzi_label.Size = new System.Drawing.Size(77, 15);
             this.change_kanzi_label.TabIndex = 7;
@@ -106,7 +109,7 @@ namespace Gp_Form_Project
             // postal_label
             // 
             this.postal_label.AutoSize = true;
-            this.postal_label.Location = new System.Drawing.Point(288, 155);
+            this.postal_label.Location = new System.Drawing.Point(140, 183);
             this.postal_label.Name = "postal_label";
             this.postal_label.Size = new System.Drawing.Size(67, 15);
             this.postal_label.TabIndex = 9;
@@ -115,7 +118,7 @@ namespace Gp_Form_Project
             // change_kana_label
             // 
             this.change_kana_label.AutoSize = true;
-            this.change_kana_label.Location = new System.Drawing.Point(283, 108);
+            this.change_kana_label.Location = new System.Drawing.Point(135, 136);
             this.change_kana_label.Name = "change_kana_label";
             this.change_kana_label.Size = new System.Drawing.Size(72, 15);
             this.change_kana_label.TabIndex = 12;
@@ -124,7 +127,7 @@ namespace Gp_Form_Project
             // address
             // 
             this.address.AutoSize = true;
-            this.address.Location = new System.Drawing.Point(303, 203);
+            this.address.Location = new System.Drawing.Point(155, 231);
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(37, 15);
             this.address.TabIndex = 13;
@@ -133,7 +136,7 @@ namespace Gp_Form_Project
             // telephone_label
             // 
             this.telephone_label.AutoSize = true;
-            this.telephone_label.Location = new System.Drawing.Point(288, 249);
+            this.telephone_label.Location = new System.Drawing.Point(140, 277);
             this.telephone_label.Name = "telephone_label";
             this.telephone_label.Size = new System.Drawing.Size(67, 15);
             this.telephone_label.TabIndex = 14;
@@ -142,7 +145,7 @@ namespace Gp_Form_Project
             // mail_label
             // 
             this.mail_label.AutoSize = true;
-            this.mail_label.Location = new System.Drawing.Point(276, 295);
+            this.mail_label.Location = new System.Drawing.Point(128, 323);
             this.mail_label.Name = "mail_label";
             this.mail_label.Size = new System.Drawing.Size(85, 15);
             this.mail_label.TabIndex = 15;
@@ -150,18 +153,48 @@ namespace Gp_Form_Project
             // 
             // change_button
             // 
-            this.change_button.Location = new System.Drawing.Point(387, 351);
+            this.change_button.Location = new System.Drawing.Point(389, 382);
             this.change_button.Name = "change_button";
             this.change_button.Size = new System.Drawing.Size(75, 23);
             this.change_button.TabIndex = 16;
             this.change_button.Text = "変更";
             this.change_button.UseVisualStyleBackColor = true;
+            this.change_button.Click += new System.EventHandler(this.change_button_Click);
+            // 
+            // show_textBox
+            // 
+            this.show_textBox.Location = new System.Drawing.Point(273, 53);
+            this.show_textBox.Name = "show_textBox";
+            this.show_textBox.Size = new System.Drawing.Size(159, 22);
+            this.show_textBox.TabIndex = 17;
+            // 
+            // member_id_label
+            // 
+            this.member_id_label.AutoSize = true;
+            this.member_id_label.Location = new System.Drawing.Point(133, 56);
+            this.member_id_label.Name = "member_id_label";
+            this.member_id_label.Size = new System.Drawing.Size(51, 15);
+            this.member_id_label.TabIndex = 18;
+            this.member_id_label.Text = "会員ID";
+            // 
+            // show_button
+            // 
+            this.show_button.Location = new System.Drawing.Point(474, 52);
+            this.show_button.Name = "show_button";
+            this.show_button.Size = new System.Drawing.Size(75, 23);
+            this.show_button.TabIndex = 19;
+            this.show_button.Text = "表示";
+            this.show_button.UseVisualStyleBackColor = true;
+            this.show_button.Click += new System.EventHandler(this.show_button_Click);
             // 
             // change_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.show_button);
+            this.Controls.Add(this.member_id_label);
+            this.Controls.Add(this.show_textBox);
             this.Controls.Add(this.change_button);
             this.Controls.Add(this.mail_label);
             this.Controls.Add(this.telephone_label);
@@ -199,5 +232,8 @@ namespace Gp_Form_Project
         private System.Windows.Forms.Label telephone_label;
         private System.Windows.Forms.Label mail_label;
         private System.Windows.Forms.Button change_button;
+        private System.Windows.Forms.TextBox show_textBox;
+        private System.Windows.Forms.Label member_id_label;
+        private System.Windows.Forms.Button show_button;
     }
 }

@@ -16,5 +16,11 @@ namespace Gp_Form_Project
         {
             InitializeComponent();
         }
+
+        private void login_button_Click(object sender, EventArgs e)
+        {
+            change_page change = new change_page();
+            change.Show();
+        }
     }
 }

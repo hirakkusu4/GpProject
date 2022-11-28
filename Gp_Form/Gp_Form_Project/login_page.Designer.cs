@@ -76,6 +76,7 @@ namespace Gp_Form_Project
             this.login_button.TabIndex = 5;
             this.login_button.Text = "ログイン";
             this.login_button.UseVisualStyleBackColor = true;
+            this.login_button.Click += new System.EventHandler(this.login_button_Click);
             // 
             // login_page
             // 
