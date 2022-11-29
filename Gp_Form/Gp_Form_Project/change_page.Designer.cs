@@ -46,6 +46,8 @@ namespace Gp_Form_Project
             this.show_textBox = new System.Windows.Forms.TextBox();
             this.member_id_label = new System.Windows.Forms.Label();
             this.show_button = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -187,11 +189,22 @@ namespace Gp_Form_Project
             this.show_button.UseVisualStyleBackColor = true;
             this.show_button.Click += new System.EventHandler(this.show_button_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(234, 89);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 20;
+            // 
             // change_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.show_button);
             this.Controls.Add(this.member_id_label);
             this.Controls.Add(this.show_textBox);
@@ -211,6 +224,7 @@ namespace Gp_Form_Project
             this.Controls.Add(this.textBox1);
             this.Name = "change_page";
             this.Text = "会員情報変更ページ";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +249,6 @@ namespace Gp_Form_Project
         private System.Windows.Forms.TextBox show_textBox;
         private System.Windows.Forms.Label member_id_label;
         private System.Windows.Forms.Button show_button;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -27,12 +27,13 @@ namespace Gp_Form_Project
         {
             using (SQLiteConnection con = new SQLiteConnection("Data Source=member.db"))
             {
+                int show_id =int.Parse(show_textBox.Text); 
                 //
                 var dataTable = new DataTable();
                 //
-                var adapter = new SQLiteDataAdapter("SELECT name_k FROM m_member WHERE member_id=showtextBox.Text", con);
-                string shownk = adapter.ToString();
-                textBox1.Text = shownk;
+                var adapter = new SQLiteDataAdapter($"SELECT * FROM m_member WHERE member_id = {show_id}", con);
+                adapter.Fill(dataTable);
+                change_kanzi_label.Text = dataTable.Rows[0]["name_k"].ToString();
             }
         }
     }
