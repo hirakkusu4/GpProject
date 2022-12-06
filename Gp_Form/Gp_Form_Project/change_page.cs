@@ -15,7 +15,7 @@ namespace Gp_Form_Project
     {
         private void change_page_Load(object sender, EventArgs e)
         {
-            show_textBox1.ReadOnly = true;
+            
         }
         public change_page()
         {
@@ -25,25 +25,19 @@ namespace Gp_Form_Project
         {
             using (SQLiteConnection con = new SQLiteConnection("Data Source=member.db"))
             {
-                int show_id = int.Parse(show_textBox.Text);
+                int show_id = int.Parse(shows_textBox.Text);
                 //
                 var dataTable = new DataTable();
                 //
                 var adapter = new SQLiteDataAdapter($"SELECT * FROM m_member WHERE member_id = {show_id}", con);
                 adapter.Fill(dataTable);
-                show_textBox1.Text = dataTable.Rows[0]["name_k"].ToString();
-                show_textBox2.Text = dataTable.Rows[0]["name_h"].ToString();
-                show_textBox3.Text = dataTable.Rows[0]["postal"].ToString();
-                show_textBox4.Text = dataTable.Rows[0]["address"].ToString();
-                show_textBox5.Text = dataTable.Rows[0]["telephone"].ToString();
-                show_textBox6.Text = dataTable.Rows[0]["mail_address"].ToString();
+                
             }
         }
         private void change_button_Click(object sender, EventArgs e)
         {
-            using (SQLiteConnection con = new SQLiteConnection("Date Source=member.db"))
-            {
-                con.Open();
+            var con = new SQLiteConnection("member.db=:memory:");
+            
                 using (SQLiteTransaction trans = con.BeginTransaction())
                 {
                     SQLiteCommand cmd = con.CreateCommand();
@@ -58,14 +52,24 @@ namespace Gp_Form_Project
                     cmd.Parameters.Add("Member_id", System.Data.DbType.Int32);
 
 
-                    cmd.Parameters["Name_k"].Value = ;
-                    cmd.Parameters[""].Value = ;
-                    cmd.Parameters[""].Value = ;
-                    cmd.Parameters[""].Value = ;
-                    cmd.Parameters[""].Value = ;
-                    cmd.Parameters[""].Value = ;
+                    cmd.Parameters["Name_k"].Value = change_textBox1.Text;
+                    cmd.Parameters["Name_h"].Value = change_textBox2.Text;
+                    cmd.Parameters["Postal"].Value = int.Parse(change_textBox3.Text);
+                    cmd.Parameters["Address"].Value = change_textBox4.Text;
+                    cmd.Parameters["Telephone"].Value = int.Parse(change_textBox5.Text);
+                    cmd.Parameters["Mailaddress"].Value = change_textBox6.Text;
+                    cmd.Parameters["Member_id"].Value = int.Parse(shows_textBox.Text);
+
+                    cmd.ExecuteNonQuery();
+
+                    trans.Commit();
                 }
-            }
+            
+        }
+
+        private void change_page_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

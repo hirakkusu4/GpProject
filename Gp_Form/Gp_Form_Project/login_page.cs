@@ -19,8 +19,8 @@ namespace Gp_Form_Project
 
         private void login_button_Click(object sender, EventArgs e)
         {
-            change_page change = new change_page();
-            change.Show();
+            search_page search = new search_page();
+            search.Show();
         }
     }
 }

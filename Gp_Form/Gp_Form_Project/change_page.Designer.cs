@@ -29,12 +29,6 @@ namespace Gp_Form_Project
         /// </summary>
         private void InitializeComponent()
         {
-            this.show_textBox1 = new System.Windows.Forms.TextBox();
-            this.show_textBox2 = new System.Windows.Forms.TextBox();
-            this.show_textBox3 = new System.Windows.Forms.TextBox();
-            this.show_textBox4 = new System.Windows.Forms.TextBox();
-            this.show_textBox5 = new System.Windows.Forms.TextBox();
-            this.show_textBox6 = new System.Windows.Forms.TextBox();
             this.change_kanzi_label = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.postal_label = new System.Windows.Forms.Label();
@@ -43,58 +37,16 @@ namespace Gp_Form_Project
             this.telephone_label = new System.Windows.Forms.Label();
             this.mail_label = new System.Windows.Forms.Label();
             this.change_button = new System.Windows.Forms.Button();
-            this.show_textBox = new System.Windows.Forms.TextBox();
+            this.shows_textBox = new System.Windows.Forms.TextBox();
             this.member_id_label = new System.Windows.Forms.Label();
             this.show_button = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.change_textBox1 = new System.Windows.Forms.TextBox();
+            this.change_textBox2 = new System.Windows.Forms.TextBox();
+            this.change_textBox4 = new System.Windows.Forms.TextBox();
+            this.change_textBox5 = new System.Windows.Forms.TextBox();
+            this.change_textBox6 = new System.Windows.Forms.TextBox();
+            this.change_textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // show_textBox1
-            // 
-            this.show_textBox1.Location = new System.Drawing.Point(228, 95);
-            this.show_textBox1.Name = "show_textBox1";
-            this.show_textBox1.Size = new System.Drawing.Size(200, 22);
-            this.show_textBox1.TabIndex = 0;
-            // 
-            // show_textBox2
-            // 
-            this.show_textBox2.Location = new System.Drawing.Point(228, 139);
-            this.show_textBox2.Name = "show_textBox2";
-            this.show_textBox2.Size = new System.Drawing.Size(200, 22);
-            this.show_textBox2.TabIndex = 1;
-            // 
-            // show_textBox3
-            // 
-            this.show_textBox3.Location = new System.Drawing.Point(228, 186);
-            this.show_textBox3.Name = "show_textBox3";
-            this.show_textBox3.Size = new System.Drawing.Size(200, 22);
-            this.show_textBox3.TabIndex = 2;
-            // 
-            // show_textBox4
-            // 
-            this.show_textBox4.Location = new System.Drawing.Point(228, 234);
-            this.show_textBox4.Name = "show_textBox4";
-            this.show_textBox4.Size = new System.Drawing.Size(200, 22);
-            this.show_textBox4.TabIndex = 3;
-            // 
-            // show_textBox5
-            // 
-            this.show_textBox5.Location = new System.Drawing.Point(228, 280);
-            this.show_textBox5.Name = "show_textBox5";
-            this.show_textBox5.Size = new System.Drawing.Size(200, 22);
-            this.show_textBox5.TabIndex = 4;
-            // 
-            // show_textBox6
-            // 
-            this.show_textBox6.Location = new System.Drawing.Point(228, 326);
-            this.show_textBox6.Name = "show_textBox6";
-            this.show_textBox6.Size = new System.Drawing.Size(200, 22);
-            this.show_textBox6.TabIndex = 5;
             // 
             // change_kanzi_label
             // 
@@ -167,12 +119,12 @@ namespace Gp_Form_Project
             this.change_button.UseVisualStyleBackColor = true;
             this.change_button.Click += new System.EventHandler(this.change_button_Click);
             // 
-            // show_textBox
+            // shows_textBox
             // 
-            this.show_textBox.Location = new System.Drawing.Point(228, 53);
-            this.show_textBox.Name = "show_textBox";
-            this.show_textBox.Size = new System.Drawing.Size(159, 22);
-            this.show_textBox.TabIndex = 17;
+            this.shows_textBox.Location = new System.Drawing.Point(228, 53);
+            this.shows_textBox.Name = "shows_textBox";
+            this.shows_textBox.Size = new System.Drawing.Size(159, 22);
+            this.shows_textBox.TabIndex = 17;
             // 
             // member_id_label
             // 
@@ -193,62 +145,62 @@ namespace Gp_Form_Project
             this.show_button.UseVisualStyleBackColor = true;
             this.show_button.Click += new System.EventHandler(this.show_button_Click);
             // 
-            // textBox1
+            // change_textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(491, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 22);
-            this.textBox1.TabIndex = 20;
+            this.change_textBox1.Location = new System.Drawing.Point(491, 95);
+            this.change_textBox1.Name = "change_textBox1";
+            this.change_textBox1.Size = new System.Drawing.Size(196, 22);
+            this.change_textBox1.TabIndex = 20;
             // 
-            // textBox2
+            // change_textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(491, 139);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 22);
-            this.textBox2.TabIndex = 21;
+            this.change_textBox2.Location = new System.Drawing.Point(491, 139);
+            this.change_textBox2.Name = "change_textBox2";
+            this.change_textBox2.Size = new System.Drawing.Size(196, 22);
+            this.change_textBox2.TabIndex = 21;
             // 
-            // textBox3
+            // change_textBox4
             // 
-            this.textBox3.Location = new System.Drawing.Point(491, 186);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(196, 22);
-            this.textBox3.TabIndex = 22;
+            this.change_textBox4.Location = new System.Drawing.Point(491, 234);
+            this.change_textBox4.Name = "change_textBox4";
+            this.change_textBox4.Size = new System.Drawing.Size(196, 22);
+            this.change_textBox4.TabIndex = 23;
             // 
-            // textBox4
+            // change_textBox5
             // 
-            this.textBox4.Location = new System.Drawing.Point(491, 234);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(196, 22);
-            this.textBox4.TabIndex = 23;
+            this.change_textBox5.Location = new System.Drawing.Point(491, 280);
+            this.change_textBox5.Name = "change_textBox5";
+            this.change_textBox5.Size = new System.Drawing.Size(196, 22);
+            this.change_textBox5.TabIndex = 24;
             // 
-            // textBox5
+            // change_textBox6
             // 
-            this.textBox5.Location = new System.Drawing.Point(491, 280);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(196, 22);
-            this.textBox5.TabIndex = 24;
+            this.change_textBox6.Location = new System.Drawing.Point(491, 326);
+            this.change_textBox6.Name = "change_textBox6";
+            this.change_textBox6.Size = new System.Drawing.Size(196, 22);
+            this.change_textBox6.TabIndex = 25;
             // 
-            // textBox6
+            // change_textBox3
             // 
-            this.textBox6.Location = new System.Drawing.Point(491, 326);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(196, 22);
-            this.textBox6.TabIndex = 25;
+            this.change_textBox3.Location = new System.Drawing.Point(491, 186);
+            this.change_textBox3.Name = "change_textBox3";
+            this.change_textBox3.Size = new System.Drawing.Size(196, 22);
+            this.change_textBox3.TabIndex = 22;
             // 
             // change_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.change_textBox6);
+            this.Controls.Add(this.change_textBox5);
+            this.Controls.Add(this.change_textBox4);
+            this.Controls.Add(this.change_textBox3);
+            this.Controls.Add(this.change_textBox2);
+            this.Controls.Add(this.change_textBox1);
             this.Controls.Add(this.show_button);
             this.Controls.Add(this.member_id_label);
-            this.Controls.Add(this.show_textBox);
+            this.Controls.Add(this.shows_textBox);
             this.Controls.Add(this.change_button);
             this.Controls.Add(this.mail_label);
             this.Controls.Add(this.telephone_label);
@@ -257,27 +209,15 @@ namespace Gp_Form_Project
             this.Controls.Add(this.postal_label);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.change_kanzi_label);
-            this.Controls.Add(this.show_textBox6);
-            this.Controls.Add(this.show_textBox5);
-            this.Controls.Add(this.show_textBox4);
-            this.Controls.Add(this.show_textBox3);
-            this.Controls.Add(this.show_textBox2);
-            this.Controls.Add(this.show_textBox1);
             this.Name = "change_page";
             this.Text = "会員情報変更ページ";
+            this.Load += new System.EventHandler(this.change_page_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox show_textBox1;
-        private System.Windows.Forms.TextBox show_textBox2;
-        private System.Windows.Forms.TextBox show_textBox3;
-        private System.Windows.Forms.TextBox show_textBox4;
-        private System.Windows.Forms.TextBox show_textBox5;
-        private System.Windows.Forms.TextBox show_textBox6;
         private System.Windows.Forms.Label change_kanzi_label;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label postal_label;
@@ -286,14 +226,14 @@ namespace Gp_Form_Project
         private System.Windows.Forms.Label telephone_label;
         private System.Windows.Forms.Label mail_label;
         private System.Windows.Forms.Button change_button;
-        private System.Windows.Forms.TextBox show_textBox;
+        private System.Windows.Forms.TextBox shows_textBox;
         private System.Windows.Forms.Label member_id_label;
         private System.Windows.Forms.Button show_button;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox change_textBox1;
+        private System.Windows.Forms.TextBox change_textBox2;
+        private System.Windows.Forms.TextBox change_textBox4;
+        private System.Windows.Forms.TextBox change_textBox5;
+        private System.Windows.Forms.TextBox change_textBox6;
+        private System.Windows.Forms.TextBox change_textBox3;
     }
 }
