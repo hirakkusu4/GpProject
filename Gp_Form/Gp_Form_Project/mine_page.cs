@@ -45,6 +45,12 @@ namespace Gp_Form_Project
                         " postal INTEGER, address TEXT, telephone INTEGER, gender TEXT, birth_date INTEGER, mail_address TEXT, " +
                         "membertype_code INTEGER,register_date INTEGER, last_use_date INTEGER, next_use_date INTEGER, password TEXT)";
 
+                   // command.CommandText =
+                   //     "create table m_membertype()";
+
+                   // command.CommandText =
+                   //     "create table m_plan()";
+
                     command.ExecuteNonQuery();
                 }
                 con.Close();

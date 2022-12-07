@@ -177,7 +177,7 @@ namespace Gp_Form_Project
             this.Controls.Add(this.search_label);
             this.Controls.Add(this.search_button);
             this.Name = "search_page";
-            this.Text = "V";
+            this.Text = "会員情報検索ページ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
