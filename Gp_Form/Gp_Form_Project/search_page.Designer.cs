@@ -67,8 +67,10 @@ namespace Gp_Form_Project
             // 
             // search_textBox
             // 
+            this.search_textBox.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.search_textBox.Location = new System.Drawing.Point(239, 55);
             this.search_textBox.Name = "search_textBox";
+            this.search_textBox.ShortcutsEnabled = false;
             this.search_textBox.Size = new System.Drawing.Size(192, 22);
             this.search_textBox.TabIndex = 2;
             // 

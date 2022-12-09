@@ -15,7 +15,7 @@ namespace Gp_Form_Project
     {
         private void change_page_Load(object sender, EventArgs e)
         {
-            
+            change_textBox1.ReadOnly = true;
         }
         public change_page()
         {
