@@ -82,6 +82,7 @@ namespace Gp_Form_Project
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "会員情報管理ページ";
+            this.TransparencyKey = System.Drawing.Color.Black;
             this.ResumeLayout(false);
 
         }

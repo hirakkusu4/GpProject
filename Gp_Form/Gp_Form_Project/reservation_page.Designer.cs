@@ -29,10 +29,17 @@ namespace Gp_Form_Project
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // reservation_page
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "reservation_page";
             this.Text = "次回予約ページ";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

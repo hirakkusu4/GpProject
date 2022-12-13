@@ -78,6 +78,7 @@ namespace Gp_Form_Project
             this.Controls.Add(this.button1);
             this.Controls.Add(this.login_button);
             this.Controls.Add(this.register_button);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "mine_page";
             this.Text = "メインメニュー";
             this.ResumeLayout(false);
