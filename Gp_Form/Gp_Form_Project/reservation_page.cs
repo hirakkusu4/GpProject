@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Gp_Form_Project
+namespace GameProgrammingFormProject
 {
-    public partial class reservation_page : Form
+    public partial class Reservation_Page : Form
     {
-        public reservation_page()
+        public Reservation_Page()
         {
             InitializeComponent();
         }

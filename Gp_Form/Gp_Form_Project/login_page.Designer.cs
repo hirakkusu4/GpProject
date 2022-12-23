@@ -1,7 +1,7 @@
 ﻿
-namespace Gp_Form_Project
+namespace GameProgrammingFormProject
 {
-    partial class login_page
+    partial class Login_Page
     {
         /// <summary>
         /// Required designer variable.
@@ -31,9 +31,9 @@ namespace Gp_Form_Project
         {
             this.login_memberID_label = new System.Windows.Forms.Label();
             this.login_password_label = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.login_button = new System.Windows.Forms.Button();
+            this.loginIdTextBox = new System.Windows.Forms.TextBox();
+            this.loginPassTextBox = new System.Windows.Forms.TextBox();
+            this.loginButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // login_memberID_label
@@ -54,41 +54,41 @@ namespace Gp_Form_Project
             this.login_password_label.TabIndex = 1;
             this.login_password_label.Text = "パスワード";
             // 
-            // textBox1
+            // loginIdTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(310, 146);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 22);
-            this.textBox1.TabIndex = 4;
+            this.loginIdTextBox.Location = new System.Drawing.Point(309, 74);
+            this.loginIdTextBox.Name = "loginIdTextBox";
+            this.loginIdTextBox.Size = new System.Drawing.Size(211, 22);
+            this.loginIdTextBox.TabIndex = 4;
             // 
-            // textBox2
+            // loginPassTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(310, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(211, 22);
-            this.textBox2.TabIndex = 3;
+            this.loginPassTextBox.Location = new System.Drawing.Point(309, 146);
+            this.loginPassTextBox.Name = "loginPassTextBox";
+            this.loginPassTextBox.Size = new System.Drawing.Size(211, 22);
+            this.loginPassTextBox.TabIndex = 3;
             // 
-            // login_button
+            // loginButton
             // 
-            this.login_button.Location = new System.Drawing.Point(343, 224);
-            this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(75, 23);
-            this.login_button.TabIndex = 5;
-            this.login_button.Text = "ログイン";
-            this.login_button.UseVisualStyleBackColor = true;
-            this.login_button.Click += new System.EventHandler(this.login_button_Click);
+            this.loginButton.Location = new System.Drawing.Point(343, 224);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(75, 23);
+            this.loginButton.TabIndex = 5;
+            this.loginButton.Text = "ログイン";
+            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.LoginButtonClick);
             // 
-            // login_page
+            // Login_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.login_button);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.loginButton);
+            this.Controls.Add(this.loginPassTextBox);
+            this.Controls.Add(this.loginIdTextBox);
             this.Controls.Add(this.login_password_label);
             this.Controls.Add(this.login_memberID_label);
-            this.Name = "login_page";
+            this.Name = "Login_Page";
             this.Text = "ログインページ";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -99,8 +99,8 @@ namespace Gp_Form_Project
 
         private System.Windows.Forms.Label login_memberID_label;
         private System.Windows.Forms.Label login_password_label;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button login_button;
+        private System.Windows.Forms.TextBox loginIdTextBox;
+        private System.Windows.Forms.TextBox loginPassTextBox;
+        private System.Windows.Forms.Button loginButton;
     }
 }

@@ -1,7 +1,7 @@
 ﻿
-namespace Gp_Form_Project
+namespace GameProgrammingFormProject
 {
-    partial class reservation_page
+    partial class Reservation_Page
     {
         /// <summary>
         /// Required designer variable.

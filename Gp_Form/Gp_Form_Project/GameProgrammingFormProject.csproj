@@ -51,80 +51,79 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="change_page.cs">
+    <Compile Include="Change_Page.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="change_page.Designer.cs">
-      <DependentUpon>change_page.cs</DependentUpon>
+    <Compile Include="Change_Page.Designer.cs">
+      <DependentUpon>Change_Page.cs</DependentUpon>
     </Compile>
-    <Compile Include="register_page.cs">
+    <Compile Include="ManagementPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="register_page.Designer.cs">
-      <DependentUpon>register_page.cs</DependentUpon>
+    <Compile Include="ManagementPage.Designer.cs">
+      <DependentUpon>ManagementPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="secession_page.cs">
+    <Compile Include="Register_Page.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="secession_page.Designer.cs">
-      <DependentUpon>secession_page.cs</DependentUpon>
+    <Compile Include="Register_Page.Designer.cs">
+      <DependentUpon>Register_Page.cs</DependentUpon>
     </Compile>
-    <Compile Include="reservation_page.cs">
+    <Compile Include="Secession_Page.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="reservation_page.Designer.cs">
-      <DependentUpon>reservation_page.cs</DependentUpon>
+    <Compile Include="Secession_Page.Designer.cs">
+      <DependentUpon>Secession_Page.cs</DependentUpon>
     </Compile>
-    <Compile Include="search_page.cs">
+    <Compile Include="Reservation_Page.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="search_page.Designer.cs">
-      <DependentUpon>search_page.cs</DependentUpon>
+    <Compile Include="Reservation_Page.Designer.cs">
+      <DependentUpon>Reservation_Page.cs</DependentUpon>
     </Compile>
-    <Compile Include="management_page.cs">
+    <Compile Include="SearchPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include=".Designer.cs">
-      <DependentUpon>management_page.cs</DependentUpon>
+    <Compile Include="SearchPage.Designer.cs">
+      <DependentUpon>SearchPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mine_Page.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mine_page.cs">
+    <Compile Include="Mine_Page.Designer.cs">
+      <DependentUpon>Mine_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Page.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mine_page.Designer.cs">
-      <DependentUpon>mine_page.cs</DependentUpon>
-    </Compile>
-    <Compile Include="login_page.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="login_page.Designer.cs">
-      <DependentUpon>login_page.cs</DependentUpon>
+    <Compile Include="Login_Page.Designer.cs">
+      <DependentUpon>Login_Page.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="change_page.resx">
-      <DependentUpon>change_page.cs</DependentUpon>
+    <EmbeddedResource Include="Change_Page.resx">
+      <DependentUpon>Change_Page.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="register_page.resx">
-      <DependentUpon>register_page.cs</DependentUpon>
+    <EmbeddedResource Include="ManagementPage.resx">
+      <DependentUpon>ManagementPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="reservation_page.resx">
-      <DependentUpon>reservation_page.cs</DependentUpon>
+    <EmbeddedResource Include="Register_Page.resx">
+      <DependentUpon>Register_Page.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="search_page.resx">
-      <DependentUpon>search_page.cs</DependentUpon>
+    <EmbeddedResource Include="Reservation_Page.resx">
+      <DependentUpon>Reservation_Page.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="secession_page.resx">
-      <DependentUpon>secession_page.cs</DependentUpon>
+    <EmbeddedResource Include="SearchPage.resx">
+      <DependentUpon>SearchPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login_page.resx">
-      <DependentUpon>login_page.cs</DependentUpon>
+    <EmbeddedResource Include="Secession_Page.resx">
+      <DependentUpon>Secession_Page.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="management_page.resx">
-      <DependentUpon>management_page.cs</DependentUpon>
+    <EmbeddedResource Include="Login_Page.resx">
+      <DependentUpon>Login_Page.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mine_page.resx">
-      <DependentUpon>mine_page.cs</DependentUpon>
+    <EmbeddedResource Include="Mine_Page.resx">
+      <DependentUpon>Mine_Page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

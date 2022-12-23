@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Gp_Form_Project
+namespace GameProgrammingFormProject
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Gp_Form_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mine_page());
+            Application.Run(new Mine_Page());
         }
     }
 }

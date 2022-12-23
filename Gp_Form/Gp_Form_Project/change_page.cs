@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 
-namespace Gp_Form_Project
+namespace GameProgrammingFormProject
 {
-    public partial class change_page : Form
+    public partial class Change_Page : Form
     {
         private void change_page_Load(object sender, EventArgs e)
         {
             change_textBox1.ReadOnly = true;
         }
-        public change_page()
+        public Change_Page()
         {
             InitializeComponent();
         }

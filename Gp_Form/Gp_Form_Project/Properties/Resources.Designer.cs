@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace Gp_Form_Project.Properties
+namespace GameProgrammingFormProject.Properties
 {
     /// <summary>
     ///   ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。

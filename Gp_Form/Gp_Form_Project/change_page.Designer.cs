@@ -1,7 +1,7 @@
 ﻿
-namespace Gp_Form_Project
+namespace GameProgrammingFormProject
 {
-    partial class change_page
+    partial class Change_Page
     {
         /// <summary>
         /// Required designer variable.

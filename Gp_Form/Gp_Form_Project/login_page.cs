@@ -1,26 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
-namespace Gp_Form_Project
+namespace GameProgrammingFormProject
 {
-    public partial class login_page : Form
+    public partial class Login_Page : Form
     {
-        public login_page()
+        public Login_Page()
         {
             InitializeComponent();
         }
 
-        private void login_button_Click(object sender, EventArgs e)
+        private void LoginButtonClick(object sender, EventArgs e)
         {
-            search_page search = new search_page();
-            search.Show();
+            // 会員IDが入力されていない場合
+            if (loginIdTextBox.Text == string.Empty)
+            {
+                // ID未入力を伝えるダイアログ表示
+                DialogResult Null = MessageBox.Show("会員IDを入力してください。", "エラー",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            // パスワードが入力されていない場合 
+            else if (loginPassTextBox.Text == string.Empty)
+            {
+                DialogResult Null = MessageBox.Show("パスワードを入力してください。", "エラー",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                using (SQLiteConnection con = new SQLiteConnection("Data Source=member.db"))
+                {
+
+                }
+            }
+            //SearchPage search = new SearchPage();
+            //search.Show();
         }
     }
 }
