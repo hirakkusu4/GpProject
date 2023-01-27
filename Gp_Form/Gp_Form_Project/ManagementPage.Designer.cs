@@ -29,68 +29,72 @@ namespace GameProgrammingFormProject
         /// </summary>
         private void InitializeComponent()
         {
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.secessionButton = new System.Windows.Forms.Button();
+            this.changeButton = new System.Windows.Forms.Button();
+            this.searchButton = new System.Windows.Forms.Button();
+            this.logoutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button4
+            // secessionButton
             // 
-            this.button4.Location = new System.Drawing.Point(339, 315);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(123, 31);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "退会";
-            this.button4.UseVisualStyleBackColor = true;
+            this.secessionButton.Location = new System.Drawing.Point(335, 245);
+            this.secessionButton.Name = "secessionButton";
+            this.secessionButton.Size = new System.Drawing.Size(123, 31);
+            this.secessionButton.TabIndex = 7;
+            this.secessionButton.Text = "退会";
+            this.secessionButton.UseVisualStyleBackColor = true;
+            this.secessionButton.Click += new System.EventHandler(this.SecessionBottun_Click);
             // 
-            // button3
+            // changeButton
             // 
-            this.button3.Location = new System.Drawing.Point(339, 243);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 31);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "次回予約";
-            this.button3.UseVisualStyleBackColor = true;
+            this.changeButton.Location = new System.Drawing.Point(335, 157);
+            this.changeButton.Name = "changeButton";
+            this.changeButton.Size = new System.Drawing.Size(123, 31);
+            this.changeButton.TabIndex = 5;
+            this.changeButton.Text = "会員情報変更";
+            this.changeButton.UseVisualStyleBackColor = true;
+            this.changeButton.Click += new System.EventHandler(this.ChangeButton_Click);
             // 
-            // button2
+            // searchButton
             // 
-            this.button2.Location = new System.Drawing.Point(339, 169);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 31);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "会員情報変更";
-            this.button2.UseVisualStyleBackColor = true;
+            this.searchButton.Location = new System.Drawing.Point(335, 65);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(123, 31);
+            this.searchButton.TabIndex = 4;
+            this.searchButton.Text = "会員情報検索";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
-            // button1
+            // logoutButton
             // 
-            this.button1.Location = new System.Drawing.Point(339, 105);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 31);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "会員情報検索";
-            this.button1.UseVisualStyleBackColor = true;
+            this.logoutButton.Location = new System.Drawing.Point(335, 335);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(123, 31);
+            this.logoutButton.TabIndex = 8;
+            this.logoutButton.Text = "ログアウト";
+            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
-            // management_page
+            // ManagementPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "management_page";
-            this.Text = "Form1";
+            this.Controls.Add(this.logoutButton);
+            this.Controls.Add(this.secessionButton);
+            this.Controls.Add(this.changeButton);
+            this.Controls.Add(this.searchButton);
+            this.Name = "ManagementPage";
+            this.Text = "会員情報管理画面";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button secessionButton;
+        private System.Windows.Forms.Button changeButton;
+        private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.Button logoutButton;
     }
 }

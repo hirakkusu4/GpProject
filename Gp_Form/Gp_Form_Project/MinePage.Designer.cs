@@ -1,7 +1,7 @@
 ﻿
 namespace GameProgrammingFormProject
 {
-    partial class Mine_Page
+    partial class MinePage
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -30,11 +30,12 @@ namespace GameProgrammingFormProject
         private void InitializeComponent()
         {
             this.sqLiteCommandBuilder1 = new System.Data.SQLite.SQLiteCommandBuilder();
-            this.register_button = new System.Windows.Forms.Button();
-            this.login_button = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.registerButton = new System.Windows.Forms.Button();
+            this.loginButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
+            this.endButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,35 +44,25 @@ namespace GameProgrammingFormProject
             this.sqLiteCommandBuilder1.DataAdapter = null;
             this.sqLiteCommandBuilder1.QuoteSuffix = "]";
             // 
-            // register_button
+            // registerButton
             // 
-            this.register_button.Location = new System.Drawing.Point(331, 104);
-            this.register_button.Name = "register_button";
-            this.register_button.Size = new System.Drawing.Size(229, 75);
-            this.register_button.TabIndex = 0;
-            this.register_button.Text = "新規登録";
-            this.register_button.UseVisualStyleBackColor = true;
-            this.register_button.Click += new System.EventHandler(this.register_button_Click);
+            this.registerButton.Location = new System.Drawing.Point(331, 56);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(229, 75);
+            this.registerButton.TabIndex = 0;
+            this.registerButton.Text = "新規登録";
+            this.registerButton.UseVisualStyleBackColor = true;
+            this.registerButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
-            // login_button
+            // loginButton
             // 
-            this.login_button.Location = new System.Drawing.Point(331, 265);
-            this.login_button.Name = "login_button";
-            this.login_button.Size = new System.Drawing.Size(229, 75);
-            this.login_button.TabIndex = 1;
-            this.login_button.Text = "ログイン";
-            this.login_button.UseVisualStyleBackColor = true;
-            this.login_button.Click += new System.EventHandler(this.login_button_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(707, 216);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "生成";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.loginButton.Location = new System.Drawing.Point(331, 216);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(229, 75);
+            this.loginButton.TabIndex = 1;
+            this.loginButton.Text = "ログイン";
+            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // dataGridView1
             // 
@@ -93,18 +84,39 @@ namespace GameProgrammingFormProject
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Mine_Page
+            // endButton
+            // 
+            this.endButton.Location = new System.Drawing.Point(331, 374);
+            this.endButton.Name = "endButton";
+            this.endButton.Size = new System.Drawing.Size(229, 75);
+            this.endButton.TabIndex = 6;
+            this.endButton.Text = "終了";
+            this.endButton.UseVisualStyleBackColor = true;
+            this.endButton.Click += new System.EventHandler(this.EndButton_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(738, 254);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // MinePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 509);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.endButton);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.login_button);
-            this.Controls.Add(this.register_button);
+            this.Controls.Add(this.loginButton);
+            this.Controls.Add(this.registerButton);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Name = "Mine_Page";
+            this.Name = "MinePage";
             this.Text = "メインメニュー";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -114,11 +126,12 @@ namespace GameProgrammingFormProject
         #endregion
 
         private System.Data.SQLite.SQLiteCommandBuilder sqLiteCommandBuilder1;
-        private System.Windows.Forms.Button register_button;
-        private System.Windows.Forms.Button login_button;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button registerButton;
+        private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button endButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 

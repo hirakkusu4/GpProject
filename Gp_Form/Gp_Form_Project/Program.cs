@@ -8,6 +8,8 @@ namespace GameProgrammingFormProject
 {
     static class Program
     {
+        public static ApplicationContext End;
+
         /// <summary>
         /// アプリケーションのメイン エントリ ポイントです。
         /// </summary>
@@ -16,7 +18,9 @@ namespace GameProgrammingFormProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Mine_Page());
+            End = new ApplicationContext();
+            End.MainForm = new MinePage();
+            Application.Run(End);
         }
     }
 }

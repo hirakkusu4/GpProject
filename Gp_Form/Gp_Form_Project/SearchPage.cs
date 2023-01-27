@@ -7,6 +7,26 @@ namespace GameProgrammingFormProject
 {
     public partial class SearchPage : Form
     {
+        // 検索用SQL
+        const string searchSQL = "SELECT * FROM m_member WHERE memberId = ";
+        public SearchPage()
+        {
+            InitializeComponent();
+            // フォームを中央に配置
+            this.StartPosition = FormStartPosition.CenterScreen;
+            
+            // 検索結果表示欄の入力不可
+            textBoxShowNameK.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
+            textBoxShowNameH.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
+            textBoxShowPostal.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
+            textBoxShowAddress.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
+            textBoxShowTelephone.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
+            textBoxShowGender.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
+            textBoxShowBirth.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
+            textBoxShowMailAddress.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
+            textBoxShowMemberType.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
+            textBoxShowPassword.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
+        }
         /// <summary>
         /// 会員IDで会員情報を検索
         /// </summary>
@@ -14,48 +34,49 @@ namespace GameProgrammingFormProject
         /// <param name="e">検索するとき</param>
         private void SearchButtonClick(object sender, EventArgs e)
         {
-            // 会員IDが入力されていない場合
-            if (searchTextBox.Text == String.Empty)
+            using (SQLiteConnection search = new SQLiteConnection("Data Source=member.db"))
             {
-                // 未入力を伝えるダイアログ表示
-                DialogResult Null = MessageBox.Show("会員IDを入力してください。", "エラー",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                using (SQLiteConnection con = new SQLiteConnection("Data Source=member.db"))
+                // データテーブル作成
+                DataTable dataTable = new DataTable();
+                // SQLの実行
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(searchSQL + Properties.Settings.Default.loginId, search);
+                // 結果の取得
+                adapter.Fill(dataTable);
+                // 詮索結果がなかった場合
+                if (dataTable.Rows.Count == 0)
                 {
-                    // 入力されたデータをintに変換
-                    int searchId = int.Parse(searchTextBox.Text);
-                    // データテーブル作成
-                    DataTable dataTable = new DataTable();
-                    // SQLの実行
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter($"SELECT * FROM m_member WHERE memberId = {searchId}", con);
-                    // 結果の取得
-                    adapter.Fill(dataTable);
-                    // 詮索結果がなかった場合
-                    if (dataTable.Rows.Count == 0)
+                    // もう一度入力を促すダイアログ表示
+                    DialogResult = MessageBox.Show("会員IDが見つかりませんでした。もう一度入力してください。",
+                        "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    // テキストボックスに各データを入れる
+                    // 名前(漢字)
+                    textBoxShowNameK.Text = dataTable.Rows[0]["nameK"].ToString();
+                    // 名前(かな)
+                    textBoxShowNameH.Text = dataTable.Rows[0]["nameH"].ToString();
+                    // 郵便番号
+                    textBoxShowPostal.Text = dataTable.Rows[0]["postal"].ToString();
+                    // 住所
+                    textBoxShowAddress.Text = dataTable.Rows[0]["address"].ToString();
+                    // 電話番号
+                    textBoxShowTelephone.Text = dataTable.Rows[0]["telephone"].ToString();
+                    // 性別
+                    textBoxShowGender.Text = dataTable.Rows[0]["gender"].ToString();
+                    // 生年月日
+                    textBoxShowBirth.Text = dataTable.Rows[0]["birthDate"].ToString();
+                    // 会員種別
+                    if (int.Parse(dataTable.Rows[0]["membertypeCode"].ToString()) == 1)
                     {
-                        // もう一度入力を促すダイアログ表示
-                        DialogResult notId = MessageBox.Show("会員IDが見つかりませんでした。もう一度入力してください。",
-                            "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBoxShowMemberType.Text = "一般会員";
                     }
                     else
                     {
-                        // テキストボックスに各データを入れる
-                        textBoxShowNameK.Text = dataTable.Rows[0]["nameK"].ToString(); // 名前(漢字)
-                        textBoxShowNameH.Text = dataTable.Rows[0]["nameH"].ToString(); // 名前(かな)
-                        textBoxShowPostal.Text = dataTable.Rows[0]["postal"].ToString(); // 郵便番号
-                        textBoxShowAddres.Text = dataTable.Rows[0]["address"].ToString(); // 住所
-                        textBoxShowTelephone.Text = dataTable.Rows[0]["telephone"].ToString(); // 電話番号
-                        textBoxShowGender.Text = dataTable.Rows[0]["gender"].ToString(); // 性別
-                        textBoxShowBirth.Text = dataTable.Rows[0]["birthDate"].ToString(); // 生年月日
-                        textBoxShowMialAddress.Text = dataTable.Rows[0]["mailAddress"].ToString(); // メールアドレス
-                        textBoxShowMemberType.Text = dataTable.Rows[0]["membertypeCode"].ToString(); // 会員種別
-                        textBoxShowPassword.Text = dataTable.Rows[0]["registerDate"].ToString(); // パスワード
-                        textBoxShowLastUse.Text = dataTable.Rows[0]["lastUseDate"].ToString(); // 最終利用日
-                        textBoxShowNextUse.Text = dataTable.Rows[0]["nextUseDate"].ToString(); // 次回予約日
+                        textBoxShowMemberType.Text = "特別会員";
                     }
+                    // パスワード
+                    textBoxShowPassword.Text = dataTable.Rows[0]["password"].ToString();
                 }
             }
         }
@@ -87,25 +108,6 @@ namespace GameProgrammingFormProject
                 e.Handled = true;
             }
         }
-        public SearchPage()
-        {
-            InitializeComponent();
-            // 検索結果表示欄の入力不可
-            textBoxShowNameK.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
-            textBoxShowNameH.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
-            textBoxShowPostal.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
-            textBoxShowAddres.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
-            textBoxShowTelephone.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
-            textBoxShowGender.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
-            textBoxShowBirth.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
-            textBoxShowMialAddress.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
-            textBoxShowMemberType.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
-            textBoxShowPassword.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
-            textBoxShowLastUse.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
-            textBoxShowNextUse.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
-            // ID入力欄の入力制限(数字のみ)
-            searchTextBox.KeyPress += new KeyPressEventHandler(SearchTextBoxKeyPress);   
-        }
         /// <summary>
         /// 管理画面へ戻る
         /// </summary>
@@ -114,8 +116,8 @@ namespace GameProgrammingFormProject
         private void BackButtonClick(object sender, EventArgs e)
         {
             // 会員情報管理画面を表示
-            ManagementPage management = new ManagementPage();
-            management.Show();
+            Program.End.MainForm = new ManagementPage();
+            Program.End.MainForm.Show();
             // 検索ページを閉じる
             this.Close();
         }

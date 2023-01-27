@@ -30,20 +30,16 @@ namespace GameProgrammingFormProject
         private void InitializeComponent()
         {
             this.searchButton = new System.Windows.Forms.Button();
-            this.searchLabel = new System.Windows.Forms.Label();
-            this.searchTextBox = new System.Windows.Forms.TextBox();
             this.textBoxShowNameK = new System.Windows.Forms.TextBox();
             this.textBoxShowNameH = new System.Windows.Forms.TextBox();
             this.textBoxShowPostal = new System.Windows.Forms.TextBox();
-            this.textBoxShowAddres = new System.Windows.Forms.TextBox();
+            this.textBoxShowAddress = new System.Windows.Forms.TextBox();
             this.textBoxShowTelephone = new System.Windows.Forms.TextBox();
             this.textBoxShowGender = new System.Windows.Forms.TextBox();
             this.textBoxShowBirth = new System.Windows.Forms.TextBox();
-            this.textBoxShowMialAddress = new System.Windows.Forms.TextBox();
+            this.textBoxShowMailAddress = new System.Windows.Forms.TextBox();
             this.textBoxShowMemberType = new System.Windows.Forms.TextBox();
             this.textBoxShowPassword = new System.Windows.Forms.TextBox();
-            this.textBoxShowLastUse = new System.Windows.Forms.TextBox();
-            this.textBoxShowNextUse = new System.Windows.Forms.TextBox();
             this.backButton = new System.Windows.Forms.Button();
             this.label_ShowName_k = new System.Windows.Forms.Label();
             this.label_ShowName_h = new System.Windows.Forms.Label();
@@ -54,38 +50,18 @@ namespace GameProgrammingFormProject
             this.label_ShowBirth = new System.Windows.Forms.Label();
             this.label_ShowMemberType = new System.Windows.Forms.Label();
             this.label_ShowMailaddress = new System.Windows.Forms.Label();
-            this.label_ShowLastUse = new System.Windows.Forms.Label();
             this.label_ShowPassword = new System.Windows.Forms.Label();
-            this.label_ShowNextUse = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(512, 41);
+            this.searchButton.Location = new System.Drawing.Point(349, 36);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(75, 23);
+            this.searchButton.Size = new System.Drawing.Size(99, 40);
             this.searchButton.TabIndex = 0;
             this.searchButton.Text = "検索";
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.SearchButtonClick);
-            // 
-            // searchLabel
-            // 
-            this.searchLabel.AutoSize = true;
-            this.searchLabel.Location = new System.Drawing.Point(242, 45);
-            this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(51, 15);
-            this.searchLabel.TabIndex = 1;
-            this.searchLabel.Text = "会員ID";
-            // 
-            // searchTextBox
-            // 
-            this.searchTextBox.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.searchTextBox.Location = new System.Drawing.Point(299, 42);
-            this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.ShortcutsEnabled = false;
-            this.searchTextBox.Size = new System.Drawing.Size(192, 22);
-            this.searchTextBox.TabIndex = 2;
             // 
             // textBoxShowNameK
             // 
@@ -103,20 +79,22 @@ namespace GameProgrammingFormProject
             // 
             // textBoxShowPostal
             // 
+            this.textBoxShowPostal.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.textBoxShowPostal.Location = new System.Drawing.Point(177, 219);
             this.textBoxShowPostal.Name = "textBoxShowPostal";
             this.textBoxShowPostal.Size = new System.Drawing.Size(187, 22);
             this.textBoxShowPostal.TabIndex = 5;
             // 
-            // textBoxShowAddres
+            // textBoxShowAddress
             // 
-            this.textBoxShowAddres.Location = new System.Drawing.Point(177, 266);
-            this.textBoxShowAddres.Name = "textBoxShowAddres";
-            this.textBoxShowAddres.Size = new System.Drawing.Size(187, 22);
-            this.textBoxShowAddres.TabIndex = 6;
+            this.textBoxShowAddress.Location = new System.Drawing.Point(177, 266);
+            this.textBoxShowAddress.Name = "textBoxShowAddress";
+            this.textBoxShowAddress.Size = new System.Drawing.Size(187, 22);
+            this.textBoxShowAddress.TabIndex = 6;
             // 
             // textBoxShowTelephone
             // 
+            this.textBoxShowTelephone.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.textBoxShowTelephone.Location = new System.Drawing.Point(177, 313);
             this.textBoxShowTelephone.Name = "textBoxShowTelephone";
             this.textBoxShowTelephone.Size = new System.Drawing.Size(187, 22);
@@ -124,52 +102,38 @@ namespace GameProgrammingFormProject
             // 
             // textBoxShowGender
             // 
-            this.textBoxShowGender.Location = new System.Drawing.Point(177, 356);
+            this.textBoxShowGender.Location = new System.Drawing.Point(533, 123);
             this.textBoxShowGender.Name = "textBoxShowGender";
             this.textBoxShowGender.Size = new System.Drawing.Size(187, 22);
             this.textBoxShowGender.TabIndex = 8;
             // 
             // textBoxShowBirth
             // 
-            this.textBoxShowBirth.Location = new System.Drawing.Point(526, 123);
+            this.textBoxShowBirth.Location = new System.Drawing.Point(533, 170);
             this.textBoxShowBirth.Name = "textBoxShowBirth";
             this.textBoxShowBirth.Size = new System.Drawing.Size(187, 22);
             this.textBoxShowBirth.TabIndex = 9;
             // 
-            // textBoxShowMialAddress
+            // textBoxShowMailAddress
             // 
-            this.textBoxShowMialAddress.Location = new System.Drawing.Point(526, 170);
-            this.textBoxShowMialAddress.Name = "textBoxShowMialAddress";
-            this.textBoxShowMialAddress.Size = new System.Drawing.Size(187, 22);
-            this.textBoxShowMialAddress.TabIndex = 10;
+            this.textBoxShowMailAddress.Location = new System.Drawing.Point(533, 217);
+            this.textBoxShowMailAddress.Name = "textBoxShowMailAddress";
+            this.textBoxShowMailAddress.Size = new System.Drawing.Size(187, 22);
+            this.textBoxShowMailAddress.TabIndex = 10;
             // 
             // textBoxShowMemberType
             // 
-            this.textBoxShowMemberType.Location = new System.Drawing.Point(526, 219);
+            this.textBoxShowMemberType.Location = new System.Drawing.Point(533, 266);
             this.textBoxShowMemberType.Name = "textBoxShowMemberType";
             this.textBoxShowMemberType.Size = new System.Drawing.Size(187, 22);
             this.textBoxShowMemberType.TabIndex = 11;
             // 
             // textBoxShowPassword
             // 
-            this.textBoxShowPassword.Location = new System.Drawing.Point(526, 266);
+            this.textBoxShowPassword.Location = new System.Drawing.Point(533, 313);
             this.textBoxShowPassword.Name = "textBoxShowPassword";
             this.textBoxShowPassword.Size = new System.Drawing.Size(187, 22);
             this.textBoxShowPassword.TabIndex = 12;
-            // 
-            // textBoxShowLastUse
-            // 
-            this.textBoxShowLastUse.Location = new System.Drawing.Point(526, 313);
-            this.textBoxShowLastUse.Name = "textBoxShowLastUse";
-            this.textBoxShowLastUse.Size = new System.Drawing.Size(187, 22);
-            this.textBoxShowLastUse.TabIndex = 13;
-            // 
-            // textBoxShowNextUse
-            // 
-            this.textBoxShowNextUse.Location = new System.Drawing.Point(526, 356);
-            this.textBoxShowNextUse.Name = "textBoxShowNextUse";
-            this.textBoxShowNextUse.Size = new System.Drawing.Size(187, 22);
-            this.textBoxShowNextUse.TabIndex = 14;
             // 
             // backButton
             // 
@@ -229,7 +193,7 @@ namespace GameProgrammingFormProject
             // label_ShowGender
             // 
             this.label_ShowGender.AutoSize = true;
-            this.label_ShowGender.Location = new System.Drawing.Point(71, 359);
+            this.label_ShowGender.Location = new System.Drawing.Point(434, 126);
             this.label_ShowGender.Name = "label_ShowGender";
             this.label_ShowGender.Size = new System.Drawing.Size(37, 15);
             this.label_ShowGender.TabIndex = 21;
@@ -238,7 +202,7 @@ namespace GameProgrammingFormProject
             // label_ShowBirth
             // 
             this.label_ShowBirth.AutoSize = true;
-            this.label_ShowBirth.Location = new System.Drawing.Point(427, 126);
+            this.label_ShowBirth.Location = new System.Drawing.Point(434, 173);
             this.label_ShowBirth.Name = "label_ShowBirth";
             this.label_ShowBirth.Size = new System.Drawing.Size(67, 15);
             this.label_ShowBirth.TabIndex = 22;
@@ -247,56 +211,36 @@ namespace GameProgrammingFormProject
             // label_ShowMemberType
             // 
             this.label_ShowMemberType.AutoSize = true;
-            this.label_ShowMemberType.Location = new System.Drawing.Point(427, 222);
+            this.label_ShowMemberType.Location = new System.Drawing.Point(434, 269);
             this.label_ShowMemberType.Name = "label_ShowMemberType";
-            this.label_ShowMemberType.Size = new System.Drawing.Size(68, 15);
+            this.label_ShowMemberType.Size = new System.Drawing.Size(69, 15);
             this.label_ShowMemberType.TabIndex = 23;
-            this.label_ShowMemberType.Text = "会員ランク";
+            this.label_ShowMemberType.Text = "会員タイプ";
             // 
             // label_ShowMailaddress
             // 
             this.label_ShowMailaddress.AutoSize = true;
-            this.label_ShowMailaddress.Location = new System.Drawing.Point(427, 173);
+            this.label_ShowMailaddress.Location = new System.Drawing.Point(434, 220);
             this.label_ShowMailaddress.Name = "label_ShowMailaddress";
             this.label_ShowMailaddress.Size = new System.Drawing.Size(85, 15);
             this.label_ShowMailaddress.TabIndex = 24;
             this.label_ShowMailaddress.Text = "メールアドレス";
             // 
-            // label_ShowLastUse
-            // 
-            this.label_ShowLastUse.AutoSize = true;
-            this.label_ShowLastUse.Location = new System.Drawing.Point(427, 316);
-            this.label_ShowLastUse.Name = "label_ShowLastUse";
-            this.label_ShowLastUse.Size = new System.Drawing.Size(82, 15);
-            this.label_ShowLastUse.TabIndex = 25;
-            this.label_ShowLastUse.Text = "最終利用日";
-            // 
             // label_ShowPassword
             // 
             this.label_ShowPassword.AutoSize = true;
-            this.label_ShowPassword.Location = new System.Drawing.Point(427, 269);
+            this.label_ShowPassword.Location = new System.Drawing.Point(434, 316);
             this.label_ShowPassword.Name = "label_ShowPassword";
             this.label_ShowPassword.Size = new System.Drawing.Size(64, 15);
             this.label_ShowPassword.TabIndex = 26;
             this.label_ShowPassword.Text = "パスワード";
-            // 
-            // label_ShowNextUse
-            // 
-            this.label_ShowNextUse.AutoSize = true;
-            this.label_ShowNextUse.Location = new System.Drawing.Point(427, 359);
-            this.label_ShowNextUse.Name = "label_ShowNextUse";
-            this.label_ShowNextUse.Size = new System.Drawing.Size(82, 15);
-            this.label_ShowNextUse.TabIndex = 27;
-            this.label_ShowNextUse.Text = "次回予約日";
             // 
             // SearchPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label_ShowNextUse);
             this.Controls.Add(this.label_ShowPassword);
-            this.Controls.Add(this.label_ShowLastUse);
             this.Controls.Add(this.label_ShowMailaddress);
             this.Controls.Add(this.label_ShowMemberType);
             this.Controls.Add(this.label_ShowBirth);
@@ -307,20 +251,16 @@ namespace GameProgrammingFormProject
             this.Controls.Add(this.label_ShowName_h);
             this.Controls.Add(this.label_ShowName_k);
             this.Controls.Add(this.backButton);
-            this.Controls.Add(this.textBoxShowNextUse);
-            this.Controls.Add(this.textBoxShowLastUse);
             this.Controls.Add(this.textBoxShowPassword);
             this.Controls.Add(this.textBoxShowMemberType);
-            this.Controls.Add(this.textBoxShowMialAddress);
+            this.Controls.Add(this.textBoxShowMailAddress);
             this.Controls.Add(this.textBoxShowBirth);
             this.Controls.Add(this.textBoxShowGender);
             this.Controls.Add(this.textBoxShowTelephone);
-            this.Controls.Add(this.textBoxShowAddres);
+            this.Controls.Add(this.textBoxShowAddress);
             this.Controls.Add(this.textBoxShowPostal);
             this.Controls.Add(this.textBoxShowNameH);
             this.Controls.Add(this.textBoxShowNameK);
-            this.Controls.Add(this.searchTextBox);
-            this.Controls.Add(this.searchLabel);
             this.Controls.Add(this.searchButton);
             this.Name = "SearchPage";
             this.Text = "会員情報検索ページ";
@@ -332,20 +272,16 @@ namespace GameProgrammingFormProject
         #endregion
 
         private System.Windows.Forms.Button searchButton;
-        private System.Windows.Forms.Label searchLabel;
-        private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.TextBox textBoxShowNameK;
         private System.Windows.Forms.TextBox textBoxShowNameH;
         private System.Windows.Forms.TextBox textBoxShowPostal;
-        private System.Windows.Forms.TextBox textBoxShowAddres;
+        private System.Windows.Forms.TextBox textBoxShowAddress;
         private System.Windows.Forms.TextBox textBoxShowTelephone;
         private System.Windows.Forms.TextBox textBoxShowGender;
         private System.Windows.Forms.TextBox textBoxShowBirth;
-        private System.Windows.Forms.TextBox textBoxShowMialAddress;
+        private System.Windows.Forms.TextBox textBoxShowMailAddress;
         private System.Windows.Forms.TextBox textBoxShowMemberType;
         private System.Windows.Forms.TextBox textBoxShowPassword;
-        private System.Windows.Forms.TextBox textBoxShowLastUse;
-        private System.Windows.Forms.TextBox textBoxShowNextUse;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label label_ShowName_k;
         private System.Windows.Forms.Label label_ShowName_h;
@@ -356,8 +292,6 @@ namespace GameProgrammingFormProject
         private System.Windows.Forms.Label label_ShowBirth;
         private System.Windows.Forms.Label label_ShowMemberType;
         private System.Windows.Forms.Label label_ShowMailaddress;
-        private System.Windows.Forms.Label label_ShowLastUse;
         private System.Windows.Forms.Label label_ShowPassword;
-        private System.Windows.Forms.Label label_ShowNextUse;
     }
 }
