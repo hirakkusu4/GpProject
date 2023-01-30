@@ -7,9 +7,9 @@ namespace GameProgrammingFormProject
 {
     public partial class ChangePage : Form
     {
-        // 
+        // 現在の会員情報を表示するSQL
         const string showSQL = "SELECT * FROM m_member WHERE memberId =";
-        // 
+        // 会員情報を更新するSQL
         const string changeSQL = "UPDATE m_member SET nameK = @NameK, nameH = @NameH, postal = @Postal," +
             "address = @Address, telephone = @Telephone, mailAddress = @MailAddress, " +
             "membertypeCode = @MembertypeCode WHERE memberId = ";
@@ -65,36 +65,55 @@ namespace GameProgrammingFormProject
         /// <param name="e">変更ボタンを押したとき</param>
         private void ChangeButton_Click(object sender, EventArgs e)
         {
-            using (SQLiteConnection change = new SQLiteConnection("Data Source=member.db"))
+            // 入力内容確認のダイアログ表示
+            DialogResult check = MessageBox.Show("更新内容に誤りはないですか？", "更新内容確認",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (check == DialogResult.Yes) // はい　を押した場合
             {
-                change.Open();
-                using (SQLiteTransaction trans = change.BeginTransaction())
+                using (SQLiteConnection change = new SQLiteConnection("Data Source=member.db"))
                 {
-                    SQLiteCommand cmd = change.CreateCommand();
-                    // 会員情報の変更のUPDATE
-                    cmd.CommandText = changeSQL + Properties.Settings.Default.loginId;
-                    // パラメータセット
-                    cmd.Parameters.Add("Namek", System.Data.DbType.String);
-                    cmd.Parameters.Add("Nameh", System.Data.DbType.String);
-                    cmd.Parameters.Add("Postal", System.Data.DbType.Int32);
-                    cmd.Parameters.Add("Address", System.Data.DbType.String);
-                    cmd.Parameters.Add("Telephone", System.Data.DbType.String);
-                    cmd.Parameters.Add("MailAddress", System.Data.DbType.String);
-                    cmd.Parameters.Add("MembertypeCode", System.Data.DbType.String);
-                    // データ追加
-                    cmd.Parameters["Namek"].Value = textBoxChangeNamek.Text;
-                    cmd.Parameters["Nameh"].Value = textBoxChangeNameH.Text;
-                    cmd.Parameters["Postal"].Value = int.Parse(textBoxChangePostal.Text);
-                    cmd.Parameters["Address"].Value = textBoxChangeAddress.Text;
-                    cmd.Parameters["Telephone"].Value = textBoxChangeTelephone.Text;
-                    cmd.Parameters["MailAddress"].Value = textBoxChangeMailAddress.Text;
-                    cmd.Parameters["MembertypeCode"].Value = comboBoxChangeMembertype.Text;
-                    // 実行
-                    cmd.ExecuteNonQuery();
-                    // コミット
-                    trans.Commit();
+                    change.Open();
+                    using (SQLiteTransaction trans = change.BeginTransaction())
+                    {
+                        SQLiteCommand cmd = change.CreateCommand();
+                        // 会員情報の変更のUPDATE
+                        cmd.CommandText = changeSQL + Properties.Settings.Default.loginId;
+                        // パラメータセット
+                        cmd.Parameters.Add("Namek", System.Data.DbType.String);
+                        cmd.Parameters.Add("Nameh", System.Data.DbType.String);
+                        cmd.Parameters.Add("Postal", System.Data.DbType.Int32);
+                        cmd.Parameters.Add("Address", System.Data.DbType.String);
+                        cmd.Parameters.Add("Telephone", System.Data.DbType.String);
+                        cmd.Parameters.Add("MailAddress", System.Data.DbType.String);
+                        cmd.Parameters.Add("MembertypeCode", System.Data.DbType.String);
+                        // データ追加
+                        cmd.Parameters["Namek"].Value = textBoxChangeNamek.Text;
+                        cmd.Parameters["Nameh"].Value = textBoxChangeNameH.Text;
+                        cmd.Parameters["Postal"].Value = int.Parse(textBoxChangePostal.Text);
+                        cmd.Parameters["Address"].Value = textBoxChangeAddress.Text;
+                        cmd.Parameters["Telephone"].Value = textBoxChangeTelephone.Text;
+                        cmd.Parameters["MailAddress"].Value = textBoxChangeMailAddress.Text;
+                        cmd.Parameters["MembertypeCode"].Value = comboBoxChangeMembertype.Text;
+                        // 実行
+                        cmd.ExecuteNonQuery();
+                        // コミット
+                        trans.Commit();
+                    }
+                    change.Close();
+                    // 登録完了ダイアログ表示
+                    DialogResult complete =
+                       MessageBox.Show($"更新が完了しました。", "登録完了",
+                       MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    // OKボタンを押したとき
+                    if (complete == DialogResult.OK)
+                    {
+                        // 会員情報管理画面を表示
+                        Program.End.MainForm = new ManagementPage();
+                        Program.End.MainForm.Show();
+                        // 検索ページを閉じる
+                        this.Close();
+                    }
                 }
-                change.Close();
             }
         }
         /// <summary>

@@ -87,16 +87,6 @@ namespace GameProgrammingFormProject
             // メインメニュー非表示
             this.Close();
         }
-        private void button3_Click(object sender, EventArgs e)
-        {
-            using (SQLiteConnection conn = new SQLiteConnection("Data Source=member.db"))
-            {
-                DataTable dataTable = new DataTable();
-                SQLiteDataAdapter adapter = new SQLiteDataAdapter("SELECT * FROM m_member", conn);
-                adapter.Fill(dataTable);
-                dataGridView1.DataSource = dataTable;
-            }
-        }
         /// <summary>
         /// 終了する
         /// </summary>
@@ -104,20 +94,12 @@ namespace GameProgrammingFormProject
         /// <param name="e">終了ボタンを押したとき</param>
         private void EndButton_Click(object sender, EventArgs e)
         {
-            // 終了
-            this.Close();
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            using (SQLiteConnection d = new SQLiteConnection("Data Source=member.db"))
+            DialogResult check = MessageBox.Show("システムを終了しますか？", "終了確認",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (check == DialogResult.Yes) // はい　を押した場合
             {
-                d.Open();
-                using (SQLiteCommand comm = d.CreateCommand())
-                {
-                    comm.CommandText = "drop table m_membertype";
-                    comm.ExecuteNonQuery();
-                }
-                d.Close();
+                // 終了
+                this.Close();
             }
         }
     }

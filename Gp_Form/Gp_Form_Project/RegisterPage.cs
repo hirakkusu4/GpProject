@@ -169,8 +169,8 @@ namespace GameProgrammingFormProject
         private void BackButton_Click(object sender, EventArgs e)
         {
             // メインメニュー画面へ遷移
-            MinePage mine = new MinePage();
-            mine.Visible = true;
+            Program.End.MainForm = new MinePage();
+            Program.End.MainForm.Show();
             // このページを閉じる
             this.Close();
         }

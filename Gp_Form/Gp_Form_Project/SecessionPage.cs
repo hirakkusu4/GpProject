@@ -66,6 +66,9 @@ namespace GameProgrammingFormProject
                                 }
                                 delete.Close();
                             }
+                            DialogResult complete =
+                               MessageBox.Show($"タイプが完了しました。", "退会完了",
+                               MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             // 会員情報管理画面を表示
                             Program.End.MainForm = new MinePage();
                             Program.End.MainForm.Show();

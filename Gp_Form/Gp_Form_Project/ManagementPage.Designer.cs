@@ -37,9 +37,9 @@ namespace GameProgrammingFormProject
             // 
             // secessionButton
             // 
-            this.secessionButton.Location = new System.Drawing.Point(335, 245);
+            this.secessionButton.Location = new System.Drawing.Point(318, 230);
             this.secessionButton.Name = "secessionButton";
-            this.secessionButton.Size = new System.Drawing.Size(123, 31);
+            this.secessionButton.Size = new System.Drawing.Size(167, 70);
             this.secessionButton.TabIndex = 7;
             this.secessionButton.Text = "退会";
             this.secessionButton.UseVisualStyleBackColor = true;
@@ -47,9 +47,9 @@ namespace GameProgrammingFormProject
             // 
             // changeButton
             // 
-            this.changeButton.Location = new System.Drawing.Point(335, 157);
+            this.changeButton.Location = new System.Drawing.Point(318, 142);
             this.changeButton.Name = "changeButton";
-            this.changeButton.Size = new System.Drawing.Size(123, 31);
+            this.changeButton.Size = new System.Drawing.Size(167, 70);
             this.changeButton.TabIndex = 5;
             this.changeButton.Text = "会員情報変更";
             this.changeButton.UseVisualStyleBackColor = true;
@@ -57,9 +57,9 @@ namespace GameProgrammingFormProject
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(335, 65);
+            this.searchButton.Location = new System.Drawing.Point(318, 50);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(123, 31);
+            this.searchButton.Size = new System.Drawing.Size(167, 70);
             this.searchButton.TabIndex = 4;
             this.searchButton.Text = "会員情報検索";
             this.searchButton.UseVisualStyleBackColor = true;
@@ -67,9 +67,9 @@ namespace GameProgrammingFormProject
             // 
             // logoutButton
             // 
-            this.logoutButton.Location = new System.Drawing.Point(335, 335);
+            this.logoutButton.Location = new System.Drawing.Point(318, 320);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(123, 31);
+            this.logoutButton.Size = new System.Drawing.Size(167, 70);
             this.logoutButton.TabIndex = 8;
             this.logoutButton.Text = "ログアウト";
             this.logoutButton.UseVisualStyleBackColor = true;

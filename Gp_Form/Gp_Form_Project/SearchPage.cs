@@ -14,7 +14,6 @@ namespace GameProgrammingFormProject
             InitializeComponent();
             // フォームを中央に配置
             this.StartPosition = FormStartPosition.CenterScreen;
-            
             // 検索結果表示欄の入力不可
             textBoxShowNameK.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
             textBoxShowNameH.KeyPress += new KeyPressEventHandler(ShowTextBoxKeyPress);
