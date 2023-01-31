@@ -20,7 +20,7 @@ namespace GameProgrammingFormProject
             InitializeComponent();
             // フォームを中央に配置
             this.StartPosition = FormStartPosition.CenterScreen;
-
+            // コンボボックスのスタイルの指定
             comboBoxInsertGender.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxInsertMemberType.DropDownStyle = ComboBoxStyle.DropDownList;
             // KeyPressのイベントハンドラ
@@ -106,12 +106,12 @@ namespace GameProgrammingFormProject
                                 trans.Commit();
                             }
                         }
-                        using (SQLiteConnection con = new SQLiteConnection("Data Source=member.db"))
+                        using (SQLiteConnection checkId = new SQLiteConnection("Data Source=member.db"))
                         {
                             // データテーブル作成
                             var dataTable = new DataTable();
                             // SQL実行
-                            var adapter = new SQLiteDataAdapter(idShow, con);
+                            var adapter = new SQLiteDataAdapter(idShow, checkId);
                             adapter.Fill(dataTable);
                             // 登録完了ダイアログ表示
                             DialogResult complete =
@@ -140,7 +140,7 @@ namespace GameProgrammingFormProject
         /// <param name="e">コンボボックス使用時</param>
         private void ComboBoxKeyPress(object sender, KeyPressEventArgs e)
         {
-            // KeyPressを無効にする
+            // 入力を無効にする
             e.Handled = true;
         }
         /// <summary>

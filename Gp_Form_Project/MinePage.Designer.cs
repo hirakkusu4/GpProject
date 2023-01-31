@@ -42,7 +42,7 @@ namespace GameProgrammingFormProject
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(331, 56);
+            this.registerButton.Location = new System.Drawing.Point(284, 35);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(229, 75);
             this.registerButton.TabIndex = 0;
@@ -52,7 +52,7 @@ namespace GameProgrammingFormProject
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(331, 216);
+            this.loginButton.Location = new System.Drawing.Point(284, 195);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(229, 75);
             this.loginButton.TabIndex = 1;
@@ -62,7 +62,7 @@ namespace GameProgrammingFormProject
             // 
             // endButton
             // 
-            this.endButton.Location = new System.Drawing.Point(331, 374);
+            this.endButton.Location = new System.Drawing.Point(284, 353);
             this.endButton.Name = "endButton";
             this.endButton.Size = new System.Drawing.Size(229, 75);
             this.endButton.TabIndex = 6;
@@ -74,10 +74,11 @@ namespace GameProgrammingFormProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 509);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.endButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.registerButton);
+            this.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "MinePage";
             this.Text = "メインメニュー";

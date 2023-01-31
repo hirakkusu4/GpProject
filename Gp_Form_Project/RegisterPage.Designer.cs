@@ -287,9 +287,9 @@ namespace GameProgrammingFormProject
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(179, 238);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 15);
+            this.label3.Size = new System.Drawing.Size(94, 30);
             this.label3.TabIndex = 77;
-            this.label3.Text = "例）0030806";
+            this.label3.Text = "例）003-0806\r\n　→0030806";
             // 
             // label4
             // 
@@ -305,18 +305,18 @@ namespace GameProgrammingFormProject
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(536, 159);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 15);
+            this.label5.Size = new System.Drawing.Size(123, 30);
             this.label5.TabIndex = 79;
-            this.label5.Text = "例）20020905";
+            this.label5.Text = "例）2002年9月5日\r\n　→20020905";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(179, 385);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 15);
+            this.label6.Size = new System.Drawing.Size(134, 30);
             this.label6.TabIndex = 80;
-            this.label6.Text = "例）09045716379";
+            this.label6.Text = "例）0120-831-5511\r\n　→01208315511";
             // 
             // RegisterPage
             // 

@@ -65,6 +65,8 @@ namespace GameProgrammingFormProject
                     textBoxShowGender.Text = dataTable.Rows[0]["gender"].ToString();
                     // 生年月日
                     textBoxShowBirth.Text = dataTable.Rows[0]["birthDate"].ToString();
+                    // メールアドレス
+                    textBoxShowMailAddress.Text = dataTable.Rows[0]["mailAddress"].ToString();
                     // 会員種別
                     if (int.Parse(dataTable.Rows[0]["membertypeCode"].ToString()) == 1)
                     {
